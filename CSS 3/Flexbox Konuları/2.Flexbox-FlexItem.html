@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 75%;
+            min-height: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start; /* "justify-content", 
+            "flex-direction: row; iken yatayda hizalama yapar */ 
+            background: black;
+        }
+        .box{
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 10px;
+            text-align: center;
+            background: #f2f2f2;
+        }
+        .box-1{
+            /* order: 3; */ /* "order" sayesinde sıralamalarını değiştirebiliyoruz */
+            background: red;
+            flex-grow: 1; /* width'in hepsini buradaki verilen 
+            sayıların toplamının oranına göre (1+2+3=6 .box-1'in ki 1
+            yani oranı 1/6 olur yani width'in 6 da 1 ini kaplar)
+            göre doldururlar */
+            
+            /* EĞER Kİ SADECE 1 TANESİNDE "FLEX-GROW" VAR İSE O ZAMAN
+            WİDTH'İN BOŞLUKLARINI SADECE KENDİ KAPLAR (DİĞERLERİNİN 
+            ÖNÜNE GEÇMEZ ONLARDA KENDİ GENİŞLİKLERİNDE KALIRLAR) */       
+        }
+        .box-2{
+            /* order: 1; */
+            background: blue;
+            /* align-self: flex-end; */ /* sadece ".box-2" yi (.box-2 değişebilir) hizalamaya yarar */
+            flex-grow: 2; /* width'in hepsini buradaki verilen 
+            sayıların toplamının oranına göre (1+2+3=6 .box-2'in ki 2
+            yani oranı 2/6 olur yani width'in 3 da 1 ini kaplar)
+            göre doldururlar */
+        }
+        .box-3{
+            /* order: 2; */
+            background: green;
+            flex-grow: 3; /* width'in hepsini buradaki verilen 
+            sayıların toplamının oranına göre (1+2+3=6 .box-3'in ki 3
+            yani oranı 3/6 olur yani width'in yarısını kaplar)
+            göre doldururlar */
+        }        
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+    </div>
+</body>
+</html>

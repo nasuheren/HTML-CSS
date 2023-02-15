@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nth-Child Selector</title>
+    <style>
+        p{
+            font-size: 24px;
+        }
+        /* nth child (nth = nci anlamında yani beşinci, altıncı gibi) */ 
+        p:nth-child(1){ /* Parantez içerisine kaçıncısını sçeceğimizi yazabiliriz. */
+            color: red;
+        }
+        p:nth-child(3){
+            color: blue;
+        }
+        p:nth-child(even){ /* tek çift olarak yazılabilir. */
+            color: brown;
+        }
+        /* 
+        - an + b şeklinde yazılabilir 
+        */
+        p:nth-child(2n){ /* bu şekilde formül gibi de verilebilir.(bu kısım çif anlamında matematikteki gibi) */ 
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aspernatur.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aspernatur.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aspernatur.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aspernatur.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, aspernatur.
+    </p>
+
+</body>
+</html>

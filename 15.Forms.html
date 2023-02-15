@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form & Inputs</title>
+</head>
+<body>
+    <form>
+        <!-- HTML5 Input -->
+        <label for="name">Name</label> <br>
+        <input type="text" id="name" name="name" placeholder="Your Name"> <br>
+        <label for="email">E-mail</label> <br>
+        <input type="email" id="email" name="email"> <br>
+        <label for="password">Password</label> <br>
+        <input type="password" id="password" name="password"> <br>
+        
+        <label for="date">Date</label> <br>
+        <input type="date" id="date" name="date"> <br>
+        
+        Gender <br>
+        Male
+        <input type="radio" name="gender" value="male">
+        Female
+        <input type="radio" name="gender" value="female">
+        Other
+        <input type="radio" name="gender" value="other" checked> <br>
+
+        
+        Hobbies <br>
+        Technology
+        <input type="checkbox" name="tech" id="tech">
+        Music
+        <input type="checkbox" name="music" id="music">
+        Art
+        <input type="checkbox" name="art" id="art"> <br>
+
+
+        Degree <br>
+        <select name="degree" id="degree"> 
+            <option value="seciniz" selected>Seçiniz</option>
+            <option value="bachelor">Lisans</option>
+            <option value="msc">Yüksek Lisans</option>  
+            <option value="phd">Doktora</option>
+        </select> <br>
+
+
+        <textarea name="message" id="message" rows="5" cols="30" placeholder="Your Message"></textarea> <br>
+
+        <!-- button ve input aynı anlama geliyor. (buton şeklinde verilicek ise) -->
+        <button type="reset">Sıfırla</button>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
